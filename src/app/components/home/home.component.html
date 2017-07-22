@@ -1,0 +1,18 @@
+<div>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th class="point" (click)="sortBy('name')">Name</th>
+      <th class="point" (click)="sortBy('category')">Category</th>
+      <th class="point" (click)="sortBy('amount')">Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let d of data | sort: {column: column, dir: dir}">
+      <td>{{d.name}}</td>
+      <td>{{d.category}}</td>
+      <td>{{d.amount}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
