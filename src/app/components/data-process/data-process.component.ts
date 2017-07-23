@@ -12,7 +12,7 @@ export class DataProcessComponent implements OnInit {
 
   tempArr:Array<any> = [];
   processedData: Array<any> = [];
-  
+
   constructor(private dataService:DataService){}
   ngOnInit(){
     this.dataService.getData().subscribe(
