@@ -9,8 +9,11 @@
     </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let t of tempArr">
-        <td>{{t}}</td>
+      <tr *ngFor="let name of a_names">
+        <td>{{name.n}}</td>
+        <td>{{name.d.C1}}</td>
+        <td>{{name.d.C2}}</td>
+        <td>{{name.d.C3}}</td>
       </tr>
     </tbody>
   </table>
