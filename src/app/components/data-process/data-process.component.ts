@@ -20,13 +20,16 @@ export class DataProcessComponent implements OnInit {
         var len = data.length,
           resp = {};
         for (let i = 0; i < len; i++) {
-          if (!resp[data[i].name])
-            resp[data[i].name] = {'n': data[i].name, 'd': {}};
+          var check=false;
+          if (!resp[data[i].name]) {
+            resp[data[i].name] = {'n': data[i].name, 'd': {'C1':'-', 'C2':'-', 'C3':'-'}};
+            check = true;
+          }
           resp[data[i].name]['d'][data[i].category] = data[i].amount;
-          if(this.a_names.indexOf(resp[data[i].name]) == -1){
-          this.a_names.push(resp[data[i].name]);
+          if(check) {
+            this.a_names.push(resp[data[i].name]);
+          }
         }
-      }
         this.names = this.a_names;
       });
   }
