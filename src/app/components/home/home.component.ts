@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
     this.desc = !this.desc; //change the direction
     this.column = column;
     this.dir= this.desc ? 1 : -1;
-
   }
 
   ngOnInit() {

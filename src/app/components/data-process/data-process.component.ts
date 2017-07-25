@@ -8,7 +8,6 @@ import {DataService} from "../../services/data.service";
 })
 export class DataProcessComponent implements OnInit {
 
-  names: any = '';
   a_names: Array<any> = [];
 
   constructor(private dataService: DataService) {
@@ -30,7 +29,6 @@ export class DataProcessComponent implements OnInit {
             this.a_names.push(resp[data[i].name]);
           }
         }
-        this.names = this.a_names;
       });
   }
 }
